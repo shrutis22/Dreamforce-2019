@@ -1,12 +1,12 @@
 /**
  * JS Resource for the
- * Dreamforce 2018 App.
+ * Dreamforce 2019 App.
  *
  * @author      Shruti Sridharan
- * @since       22 Aug 2018
+ * @since       17 Oct 2019
  * @revisions   NIL
  */
-var Dreamforce2018 = {
+var Dreamforce2019 = {
     constants : {
         messages : {
             
@@ -62,14 +62,14 @@ var Dreamforce2018 = {
          * @param  {[String]} lastSessionId [Id of the last retrieved session]
          */
         getSessions : function( since, lastSessionId ) {
-            var messages = Dreamforce2018.constants.messages;
+            var messages = Dreamforce2019.constants.messages;
             
-            Dreamforce2018.helpers.enableDownload( false );
+            Dreamforce2019.helpers.enableDownload( false );
             
             try {
                 var allSessions = [];
                 
-                Dreamforce2018Controller.downloadSessions(
+                Dreamforce2019Controller.downloadSessions(
                     since,
                     lastSessionId,
                     function( result, event ) {
@@ -178,29 +178,29 @@ var Dreamforce2018 = {
                                  * Save the sessions to the
                                  * Session Custom Object.
                                  */
-                                Dreamforce2018Controller.saveSessions(
+                                Dreamforce2019Controller.saveSessions(
                                     allSessions,
                                     function( result, event ) {
                                         if( event.status && result.status ) {
                                             if( downloadedSessions.length > 0 ) {
-                                                Dreamforce2018.helpers.log( messages.PROGESS_MSG.replace( "##COUNT##", allSessions.length ) );
+                                                Dreamforce2019.helpers.log( messages.PROGESS_MSG.replace( "##COUNT##", allSessions.length ) );
             
-                                                Dreamforce2018.actions.getSessions( since, lastSessionId );
+                                                Dreamforce2019.actions.getSessions( since, lastSessionId );
                                             }
                                         }
                                         else if( !event.status ) {
-                                            Dreamforce2018.helpers.log( messages.ERR_MSG + event.message );
+                                            Dreamforce2019.helpers.log( messages.ERR_MSG + event.message );
                                             
                                             alert( messages.ERR_MSG + event.message );
                                             
-                                            Dreamforce2018.helpers.enableDownload( true );
+                                            Dreamforce2019.helpers.enableDownload( true );
                                         }
                                         else {
-                                            Dreamforce2018.helpers.log( result.message );
+                                            Dreamforce2019.helpers.log( result.message );
                                             
                                             alert( result.message );
                                             
-                                            Dreamforce2018.helpers.enableDownload( true );
+                                            Dreamforce2019.helpers.enableDownload( true );
                                         }
                                     },
                                     {
@@ -211,26 +211,26 @@ var Dreamforce2018 = {
                                 );
                             }
                             else {
-                                Dreamforce2018.helpers.log( messages.COMPLETED_MSG );
+                                Dreamforce2019.helpers.log( messages.COMPLETED_MSG );
                                 
                                 alert( messages.COMPLETED_MSG );
                                 
-                                Dreamforce2018.helpers.enableDownload( true );
+                                Dreamforce2019.helpers.enableDownload( true );
                             }
                         }
                         else if( !event.status ) {
-                            Dreamforce2018.helpers.log( messages.ERR_MSG + event.message );
+                            Dreamforce2019.helpers.log( messages.ERR_MSG + event.message );
                             
                             alert( messages.ERR_MSG + event.message );
                             
-                            Dreamforce2018.helpers.enableDownload( true );
+                            Dreamforce2019.helpers.enableDownload( true );
                         }
                         else {
-                            Dreamforce2018.helpers.log( result.message );
+                            Dreamforce2019.helpers.log( result.message );
                             
                             alert( result.message );
                             
-                            Dreamforce2018.helpers.enableDownload( true );
+                            Dreamforce2019.helpers.enableDownload( true );
                         }
                     },
                     {
@@ -241,11 +241,11 @@ var Dreamforce2018 = {
                 );
             }
             catch( error ) {
-                Dreamforce2018.helpers.log( messages.ERR_MSG + error );
+                Dreamforce2019.helpers.log( messages.ERR_MSG + error );
                 
                 alert( messages.ERR_MSG + error );
                 
-                Dreamforce2018.helpers.enableDownload( true );
+                Dreamforce2019.helpers.enableDownload( true );
             }
         }
     },
@@ -254,13 +254,13 @@ var Dreamforce2018 = {
          * [Handler for the "Start Download" button]
          */
         getSessions : function() {
-            var messages = Dreamforce2018.constants.messages;
+            var messages = Dreamforce2019.constants.messages;
             
             alert( messages.START_MSG );
             
-            Dreamforce2018.helpers.log( messages.START_MSG );
+            Dreamforce2019.helpers.log( messages.START_MSG );
             
-            Dreamforce2018.actions.getSessions( "N/A", "N/A" );
+            Dreamforce2019.actions.getSessions( "N/A", "N/A" );
         }
     },
     init : function() {
