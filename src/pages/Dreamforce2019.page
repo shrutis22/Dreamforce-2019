@@ -1,0 +1,101 @@
+<apex:page controller="Dreamforce2019Controller">
+    <html>
+        <head>
+            <apex:slds />
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="{!URLFOR($Resource.Dreamforce2019)}"></script>
+        </head>
+        <body>
+            <div class="slds-scope">
+                <div class="" cssclass="project-canvas-element--closer-to-top">
+                    <div class="slds-m-bottom_small slds-page-header">
+                        <div class="" cssclass="project-canvas-element--closer-to-top">
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <div class="" cssclass="project-canvas-element--closer-to-top"><span class="slds-icon_container slds-icon-standard-default " title=""> <svg class="slds-icon slds-icon_medium slds-icon-text-slds-icon-inverse"> <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS,'assets/icons/standard-sprite/svg/symbols.svg#default')}"></use></svg></span></div>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="" cssclass="project-canvas-element--closer-to-top">
+                                        <div class="slds-page-header__title slds-text-heading_small">Dreamforce 2019</div>
+                                    </div>
+                                    <div class="" cssclass="project-canvas-element--closer-to-top">
+                                        <ul class="slds-list_horizontal slds-has-dividers_left">
+                                            <li class="slds-item">
+                                                <div class="" cssclass="project-canvas-element--closer-to-top">
+                                                    <div class="" style="font-size: 0.8125rem;">Download Sessions to Your Org and Plan Your DF Better Than Ever!</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="" cssclass="project-canvas-element--closer-to-top">
+                    <div class="slds-tabs_default">
+                        <ul role="tablist" class="slds-tabs_default__nav ">
+                            <li class="slds-tabs_default__item slds-is-active" title="README">
+                                <a href="javascript:void(0);" role="tab" tabindex="0" class="slds-tabs_default__link">
+                                    <div class="slds-icon_container slds-m-right_x-small"><svg class="slds-icon slds-icon_small slds-icon-text-default"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS,'assets/icons/utility-sprite/svg/symbols.svg#info')}"></use></svg></div>README</a>
+                            </li>
+                        </ul>
+                        <div role="tabpanel" class="slds-tabs_default__content slds-show">
+                            <div class="" cssclass="project-canvas-element--closer-to-top">
+                                <div class="slds-media">
+                                    <div class="slds-media__figure">
+                                        <div class="" cssclass="project-canvas-element--closer-to-top"><span class="slds-avatar slds-avatar_slds-avatar_large"><img class="" src="{!$Resource.InfoIcon}" title="" /></span></div>
+                                    </div>
+                                    <div class="slds-media__body">
+                                        <div class="" cssclass="project-canvas-element--closer-to-top">
+                                            <div class="" style="font-size: 0.8125rem;">Please click the <b>Start Download</b> button to download the sessions from the Dreamforce website. Note that the session details are always a subject to change. Hence, it is always recommended to verify the details of
+                                                a session from the official website too.&nbsp;<br/><br/>It also advised to click the Start Download button <b>every day</b> without fail to ensure that the session details are up to date. You will not lose your data or customization
+                                                when you click the Start Download button and every setting or change will be preserved.<br/><br/>This app is not officially supported by Dreamforce or salesforce.com. This is a community contribution by <b><a href="https://twitter.com/shruti4chess" target="_blank">@shruti4chess</a></b>                                    to make your DF planning a breeze. In case of any concerns or queries, please reach out to - <a href="mailto:shruti.sridharan22@gmail.com"><b>shruti.sridharan22@gmail.com</b></a>.<br/><br/><i>Happy Dreamforce!</i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="" cssclass="project-canvas-element--closer-to-top">
+                    <div class="slds-tabs_default">
+                        <ul role="tablist" class="slds-tabs_default__nav ">
+                            <li class="slds-tabs_default__item slds-is-active" title="DOWNLOAD SESSIONS">
+                                <a href="javascript:void(0);" role="tab" tabindex="0" class="slds-tabs_default__link">
+                                    <div class="slds-icon_container slds-m-right_x-small"><svg class="slds-icon slds-icon_small slds-icon-text-default"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS,'assets/icons/utility-sprite/svg/symbols.svg#download')}"></use></svg></div>DOWNLOAD SESSIONS</a>
+                            </li>
+                        </ul>
+                        <div role="tabpanel" class="slds-tabs_default__content slds-show">
+                            <div class="" cssclass="project-canvas-element--closer-to-top">
+                                <div class="slds-grid slds-wrap  slds-gutters  ">
+                                    <div class="slds-col slds-size_2-of-12">
+                                        <div class="" cssclass="project-canvas-element--closer-to-top"><button id="btnDownload" class="slds-button slds-m-top_x-small slds-m-left_small slds-theme_brand slds-button_brand" onclick="Dreamforce2019.handlers.getSessions()"><svg class="slds-button__icon slds-button__icon--left slds-button__icon--with-text"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{!URLFOR($Asset.SLDS,'assets/icons/utility-sprite/svg/symbols.svg#download')}"></use></svg>Start Download</button></div>
+                                    </div>
+                                    <div class="slds-col slds-size_10-of-12">
+                                        <div id="divStatus" class="slds-hide" cssclass="project-canvas-element--closer-to-top">
+                                            <svg class="lds-ellipsis" height="50px" preserveAspectRatio="xMidYMid" style="background: none;" viewBox="0 0 100 50" width="100px" xmlns="http://www.w3.org/2000/svg"> <!--circle(cx="16",cy="50",r="10")--> <circle cx="84" cy="25" fill="#78c0ed" r="1.33307"> <animate attributeName="r" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="7;0;0;0;0"/> <animate attributeName="cx" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="84;84;84;84;84"/> </circle> <circle cx="77.5251" cy="25" fill="#52a0e4" r="7"> <animate attributeName="r" begin="-0.95s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="0;7;7;7;0"/> <animate attributeName="cx" begin="-0.95s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="16;16;50;84;84"/> </circle> <circle cx="43.5251" cy="25" fill="#0584d1" r="7"> <animate attributeName="r" begin="-0.475s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="0;7;7;7;0"/> <animate attributeName="cx" begin="-0.475s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="16;16;50;84;84"/> </circle> <circle cx="16" cy="25" fill="#006fb3" r="5.66693"> <animate attributeName="r" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="0;7;7;7;0"/> <animate attributeName="cx" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="16;16;50;84;84"/> </circle> <circle cx="16" cy="25" fill="#78c0ed" r="0"> <animate attributeName="r" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="0;0;7;7;7"/> <animate attributeName="cx" begin="0s" calcMode="spline" dur="1.9s" keySplines="0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1;0 0.5 0.5 1" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="16;16;16;50;84"/> </circle> </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" cssclass="project-canvas-element--closer-to-top">
+                                <div class="slds-form-element slds-m-top_medium slds-p-around_small slds-theme_alert-texture " style="box-shadow: 1px -1px 4px grey; border-radius: 3px;"><label class="slds-form-element__label">Download Log</label>
+                                    <div class="slds-form-element__control"><textarea id="txtDloadLog" class="slds-textarea" rows="10" readonly="true"></textarea></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <script>
+            Dreamforce2019.constants.messages = {
+                PROGESS_MSG     : "{!$Label.PROGRESS_MSG}",
+                COMPLETED_MSG   : "{!$Label.COMPLETED_MSG}",
+                ERR_MSG         : "{!$Label.ERR_MSG}",
+                START_MSG       : "{!$Label.START_MSG}",
+            };
+        </script>
+    </html>
+</apex:page>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>COMPLETED_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>COMPLETED_MSG</shortDescription>
+        <value>Completed saving all the sessions. Please go to the Sessions Tab to view the sessions.</value>
+    </labels>
+    <labels>
+        <fullName>ERR_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ERR_MSG</shortDescription>
+        <value>An unexpected error has occurred. Please contact shruti.sridharan22@gmail.com with this info -</value>
+    </labels>
+    <labels>
+        <fullName>NO_SESSIONS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NO_SESSIONS</shortDescription>
+        <value>No sessions were received from Salesforce.</value>
+    </labels>
+    <labels>
+        <fullName>PROGRESS_MSG</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROGRESS_MSG</shortDescription>
+        <value>Saved ##COUNT## Sessions. Fetching the next set. Please wait...</value>
+    </labels>
+    <labels>
+        <fullName>START_MSG</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>START_MSG</shortDescription>
+        <value>The download will start shortly. Please do not close the tab or refresh the page until the download has been completed.</value>
+    </labels>
+</CustomLabels>
