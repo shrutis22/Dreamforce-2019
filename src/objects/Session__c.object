@@ -161,6 +161,65 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>Best_Of_Dreamforce__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Best Of Dreamforce</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GoogleMapURL__c</fullName>
+        <externalId>false</externalId>
+        <label>GoogleMapURL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Room_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Room Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Session_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;https://success.salesforce.com/sessions?eventId=&quot; + 
+$CustomMetadata.Dreamforce_Setting__mdt.Dreamforce_2019.Event_Id__c +
+&quot;#/session/&quot; +  Dreamforce_Session_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Session Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Session_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Session Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Venue_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Venue Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Session</label>
     <listViews>
         <fullName>All_Sessions</fullName>
