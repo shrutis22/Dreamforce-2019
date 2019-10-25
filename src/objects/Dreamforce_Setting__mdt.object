@@ -9,6 +9,15 @@
         <type>LongTextArea</type>
         <visibleLines>5</visibleLines>
     </fields>
+    <fields>        
+        <fullName>Event_Id__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Event Id</label>
+        <length>255</length>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Dreamforce Setting</label>
     <listViews>
         <fullName>All</fullName>
