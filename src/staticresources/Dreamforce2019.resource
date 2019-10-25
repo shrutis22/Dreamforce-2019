@@ -161,7 +161,25 @@ var Dreamforce2019 = {
                                             if( dfSession.Industry              !== undefined ) {
                                                 newSession.Industry__c          = dfSession.Industry;
                                             }
-        
+                                            
+                                            if( dfSession.RecordType            !== undefined ) {
+                                                newSession.Session_Type__c      = dfSession.RecordType.Name;
+                                            }
+                                            
+                                            if( dfSession.Room__r               !== undefined ) {
+                                                newSession.Room_Name__c         = dfSession.Room__r.Name;
+                                                
+                                                if( dfSession.Room__r.Venue__r !== undefined ) {
+                                                    newSession.Venue_Name__c    = dfSession.Room__r.Venue__r.Name;
+                                                    
+                                                    newSession.GoogleMapURL__c  = dfSession.Room__r.Venue__r.GoogleMapURL__c;
+                                                }
+                                            }
+                                            
+                                            if( dfSession.Best_Of_Dreamforce__c !== undefined ) {
+                                                newSession.Best_Of_Dreamforce__c= dfSession.Best_Of_Dreamforce__c;
+                                            }
+                                            
                                             if( dfSession.Id                    !== undefined ) {
                                                 newSession.Dreamforce_Session_Id__c = dfSession.Id;
                                             }
