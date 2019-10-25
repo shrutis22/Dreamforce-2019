@@ -14,6 +14,7 @@
     </types>
     <types>
         <members>Dreamforce_Setting__mdt.Sessions_Endpoint__c</members>
+        <members>Dreamforce_Setting__mdt.Event_Id__c</members>
         <members>Session__c.Dreamforce_Session_Id__c</members>
         <members>Session__c.Industry__c</members>
         <members>Session__c.Level__c</members>
@@ -25,6 +26,12 @@
         <members>Session__c.Session_Theme__c</members>
         <members>Session__c.Solution__c</members>
         <members>Session__c.Speaker__c</members>
+        <members>Session__c.Best_Of_Dreamforce__c</members>
+        <members>Session__c.GoogleMapURL__c</members>
+        <members>Session__c.Room_Name__c</members>
+        <members>Session__c.Session_Link__c</members>
+        <members>Session__c.Session_Type__c</members>
+        <members>Session__c.Venue_Name__c</members>
         <name>CustomField</name>
     </types>
     <types>
