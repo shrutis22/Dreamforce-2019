@@ -13,6 +13,12 @@ This app lets you to download all the session information from the official Drea
 ## 🙋‍♀️Why use this App ?
 What if you had all the sessions right into your Salesforce Org as records ? You could create custom fields to plan your Agenda, you could create list views of your favourite sessions, you could run reports on your must attend sessions and what not ?
 
+## 🆕 What's new
+* Direct link to the Session on **Dreamforce Website** ![image](https://user-images.githubusercontent.com/16715515/67616574-48646580-f7f8-11e9-9aa3-719d1b04cfce.png)
+* A whole new section on **Location** info ![image](https://user-images.githubusercontent.com/16715515/67616594-7cd82180-f7f8-11e9-8884-0a3e90989550.png)
+* Session Type Information ![image](https://user-images.githubusercontent.com/16715515/67616658-0f78c080-f7f9-11e9-825c-c1798981c810.png)
+
+Thanks to [**Heid Hopkins**](https://success.salesforce.com/profileview?u=00530000009ZpIVAA0) for suggesting these improvements.
 
 ## ☁️ Deployment
 Use the below button to deploy this to your SF Org in a single click!
