@@ -190,9 +190,11 @@
     <fields>
         <fullName>Session_Link__c</fullName>
         <externalId>false</externalId>
-        <formula>&quot;https://success.salesforce.com/sessions?eventId=&quot; + 
+        <formula>HYPERLINK(&quot;https://success.salesforce.com/sessions?eventId=&quot; + 
 $CustomMetadata.Dreamforce_Setting__mdt.Dreamforce_2019.Event_Id__c +
-&quot;#/session/&quot; +  Dreamforce_Session_Id__c</formula>
+&quot;#/session/&quot; + Dreamforce_Session_Id__c, &quot;https://success.salesforce.com/sessions?eventId=&quot; + 
+$CustomMetadata.Dreamforce_Setting__mdt.Dreamforce_2019.Event_Id__c +
+&quot;#/session/&quot; + Dreamforce_Session_Id__c)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Session Link</label>
         <required>false</required>
